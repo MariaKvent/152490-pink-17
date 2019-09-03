@@ -1,0 +1,155 @@
+.page-footer {
+  position: relative;
+  background-color: @white;
+}
+
+.page-footer__inner {
+  .inner (280px; 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px 0;
+
+  &--index {
+    display: none;
+  }
+}
+
+.page-footer__logo {
+  .link(@white);
+  .inner(160px; 0);
+}
+
+.page-footer__logo-icon {
+  padding-left: 5px;
+  fill: @darkgrey;
+
+  &--desktop {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    fill: @red;
+  }
+
+  &:active {
+    fill: @darkgrey;
+    opacity: 0.3;
+  }
+}
+
+.page-footer__social-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 180px;
+  margin-left: -42px;
+  margin-top: 30px;
+}
+
+.page-footer__social-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border: 4px solid @lightergrey;
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: @black;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__copyright {
+  width: 132px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.page-footer__copyright-text {
+  .fonts(400; 14px; 18px);
+  color: @darkgrey;
+}
+
+.page-footer__copyright-icon {
+  padding-top: 6px;
+  fill: @red;
+
+  &:hover,
+  &:focus {
+    fill: @black;
+  }
+
+  &:active {
+    fill: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (min-width: @tablet) {
+  .page-footer__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .inner(620px; 0);
+    z-index: 2;
+    padding: 24px 0;
+
+    &--index {
+      display: flex;
+    }
+  }
+
+  .page-footer__logo {
+    width: 160px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-footer__inner {
+    .inner(940px; 10px);
+    padding: 50px 0;
+  }
+
+  .page-footer__logo-icon {
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: inline;
+    }
+  }
+
+  .page-footer__social-list {
+    padding: 10px 5px 0 53px;
+  }
+
+  .page-footer__copyright {
+    padding: 2px 15px 0 0;
+  }
+
+  .page-footer__copyright-text {
+    font-size: 18px;
+  }
+
+  .page-footer__copyright-icon {
+    padding: 15px 0 0 0;
+  }
+}
