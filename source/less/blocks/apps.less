@@ -1,0 +1,211 @@
+.apps {
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat center 10%;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .apps {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 320px 462px;
+  }
+}
+
+.apps__inner {
+  .inner(320px; 0);
+  min-height: 787px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: url("../img/iphone-hand-mobile@1x.png") no-repeat 0 42%;
+}
+
+@media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .apps__inner {
+    background-image: url("../img/iphone-hand-mobile@2x.png") no-repeat 0 42%;
+    background-size: 258px 276px;
+  }
+}
+
+.apps__slogan {
+  width: 230px;
+  .fonts(300; 24px; 28px);
+  color: @white;
+  text-align: center;
+  margin-top: 124px;
+}
+
+.apps__wrapper {
+  .inner(320px; 0);
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1d2631;
+}
+
+.apps__download {
+  width: 260px;
+  .fonts(700; 18px; 18px);
+  .link(@white);
+  border: 2px solid @white;
+  padding: 17px 10px;
+  border-radius: 30px;
+  text-align: center;
+
+  &:focus,
+  &:hover {
+    background-color: @white;
+    color: @red;
+  }
+
+  &:active {
+    color: rgba(210, 49, 86, 0.3);
+  }
+}
+
+.apps__list {
+  width: 200px;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 39px 18px 2px 16px;
+  margin: 0;
+  list-style: none;
+}
+
+.apps__item {
+  .link(@white);
+}
+
+.apps__description {
+  width: 280px;
+  .fonts(300; 14px; 24px);
+  color: @white;
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+@media (min-width: @tablet) {
+  .apps {
+    padding-top: 56px;
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat center -40%;
+    background-size: 660px 729px;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .apps {
+      background-image: url("../img/bg-back-tablet@2x.jpg") no-repeat center -40%;
+      background-size: 1200px 729px;
+    }
+  }
+
+  .apps__inner {
+    .inner(620px; 20px);
+    min-height: 700px;
+    justify-content: center;
+    align-items: flex-start;
+    background: url("../img/iphone-hand-tablet@1x.png") no-repeat 50% 75%;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .apps__inner {
+      background-image: url("../img/iphone-hand-tablet@2x.png");
+      background-size: 700px 545px;
+    }
+  }
+
+  .apps__slogan {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    font-size: 40px;
+    line-height: 48px;
+    color: @white;
+    margin: 43px 0 0 59px;
+    text-align: center;
+  }
+
+  .apps__wrapper {
+    width: 320px;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+
+  .apps__download {
+    width: 275px;
+    margin: 29px 35px 20px 14px;
+  }
+
+  .apps__list {
+    padding: 31px 45px 2px 24px;
+  }
+
+  .apps__description {
+    width: 300px;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-right: 35px;
+    margin-left: 12px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .apps {
+    min-width: 960px;
+    margin-left: -93px;
+    background: url("../img/bg-back-desktop@1x.jpg") no-repeat center -3px;
+    background-size: cover;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .apps {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
+  .apps__inner {
+    .inner(960px; 0);
+    min-height: 800px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    background: url("../img/iphone-hand-desktop@1x.png") no-repeat -81% 86%;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .apps__inner {
+      background-image: url("../img/iphone-hand-desktop@2x.png");
+      background-size: 1050px 645px;
+    }
+  }
+
+  .apps__slogan {
+    width: 250px;
+    font-size: 50px;
+    line-height: 60px;
+    margin: 70px 0 0 81px;
+  }
+
+  .apps__download {
+    font-size: 21px;
+    margin: 52px 0 23px 95px;
+    z-index: 2;
+  }
+
+  .apps__list {
+    padding: 50px 25px 20px 118px;
+  }
+
+  .apps__description {
+    width: 300px;
+    margin-left: 125px;
+    padding-bottom: 51px;
+  }
+}

@@ -1,0 +1,34 @@
+.page-header {
+  position: relative;
+  background-color: transparent;
+  margin-top: 0;
+}
+
+.page-header__inner {
+  display: flex;
+  flex-direction: column;
+  .inner(320px; 0);
+}
+
+@media (min-width: @tablet) {
+  .page-header__inner {
+    .inner(660px; 0);
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-header {
+    background-color: rgba(0, 0, 0, 0.3);
+    margin-top: -15px;
+    z-index: 2;
+  }
+
+  .page-header__inner {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    .inner(960px; 10px);
+    background-color: transparent;
+  }
+}

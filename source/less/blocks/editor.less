@@ -1,0 +1,385 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  background-color: @lightgrey;
+}
+
+.editor__form {
+  .inner(280px; 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.editor__image {
+  width: 280px;
+  height: 374px;
+}
+
+.editor__fields {
+  .inner(208px; 0);
+  padding: 33px 20px 0 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: @lightgrey;
+  fill: #b5b9be;
+  cursor: pointer;
+}
+
+.editor__contrast {
+  margin-top: 7px;
+  padding-right: 7px;
+  fill: #b5b9be;
+
+  &:hover {
+    fill: #8d949b;
+  }
+
+  &:active {
+    fill: @red;
+  }
+}
+
+.editor__crop {
+  &:hover {
+    fill: #8d949b;
+  }
+
+  &:active {
+    fill: @red;
+  }
+}
+
+.editor__fill {
+  &:hover {
+    fill: #8d949b;
+  }
+
+  &:active {
+    fill: @red;
+  }
+}
+
+.editor__list {
+  list-style: none;
+  .inner(240px; 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.editor__item {
+  width: 240px;
+}
+
+.editor__crop-input {
+  appearance: none;
+  width: 240px;
+  cursor: pointer;
+  outline: none;
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    background-color: @black;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: @lightgrey;
+    border: 2px solid @red;
+    border-radius: 15px;
+    margin-top: -5px;
+  }
+
+  &:active::-webkit-slider-thumb {
+    background-color: @red;
+  }
+}
+
+.editor__fill-input {
+  display: none;
+  appearance: none;
+  width: 240px;
+  cursor: pointer;
+  outline: none;
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: @lightgrey;
+    border: 2px solid @red;
+    border-radius: 15px;
+    margin-top: -5px;
+  }
+
+  &:active::-webkit-slider-thumb {
+    background-color: @red;
+  }
+}
+
+.editor__contrast-input {
+  display: none;
+  appearance: none;
+  width: 240px;
+  cursor: pointer;
+  outline: none;
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 2px;
+    background-color: @black;
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: @lightgrey;
+    border: 2px solid @red;
+    border-radius: 15px;
+    margin-top: -5px;
+  }
+
+  &:active::-webkit-slider-thumb {
+    background-color: @red;
+  }
+}
+
+.editor__buttons {
+  .inner(280px; 0);
+  display: flex;
+  flex-direction: column;
+  padding: 66px 0  40px;
+}
+
+.photoset__button-upload {
+  .fonts(700; 18px; 18px);
+  color: @red;
+  border: 2px solid @red;
+  padding: 17px 0;
+  border-radius: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @red;
+    color: @white;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.photoset__button-cancel {
+  .fonts(700; 18px; 18px);
+  color: #e7e8e8;
+  border: 2px solid #dddfe0;
+  padding: 17px 0;
+  border-radius: 30px;
+  background-color: transparent;
+  text-align: center;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: #b5b9be;
+    color: #b5b9be;
+  }
+
+  &:active {
+    background-color: #b5b9be;
+    color: #cdd0d3;
+  }
+}
+
+@media (min-width: @tablet) {
+  .editor {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .editor__form {
+    .inner(620px; 0);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 55px;
+  }
+
+  .editor__image {
+    width: 300px;
+    height: 400px;
+  }
+
+  .editor_fields {
+    width: 40px;
+    padding: 9px 0 60px 37px;
+    flex-direction: column;
+    justify-content: space-between;
+    fill: @red;
+  }
+
+  .editor__contrast {
+    width: 16px;
+    height: 16px;
+    margin-top: 0;
+    padding: 0 0 0 6px;
+    fill: @red;
+
+    &:hover {
+      fill: @red;
+    }
+  }
+
+  .editor__crop {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 49px;
+
+    &:hover {
+      fill: @red;
+    }
+  }
+
+  .editor__fill {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 48px;
+
+    &:hover {
+      fill: @red;
+    }
+  }
+
+  .editor__list {
+    width: 205px;
+    padding: 4px 6px 0 0;
+  }
+
+  .editor__item {
+    width: 205px;
+  }
+
+  .editor__crop-input {
+    width: 205px;
+    margin-bottom: 72px;
+  }
+
+  .editor__fill-input {
+    display: block;
+    width: 205px;
+    margin-bottom: 70px;
+  }
+
+  .editor__contrast-input {
+    display: block;
+    width: 205px;
+  }
+
+  .editor__buttons {
+    width: 260px;
+    padding: 6px 0  4px;
+    margin: -146px 0 80px 346px;
+  }
+
+  .editor__button-upload {
+    margin-bottom: 22px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .editor__form {
+    .inner(960px; 0);
+    padding: 40px 60px 0 90px;
+  }
+
+  .editor__image {
+    margin-top: 16px;
+    width: 300px;
+    height: 400px;
+  }
+
+  .editor__fields {
+    width: 55px;
+    padding: 10px 0 60px 51px;
+  }
+
+  .editor__contrast {
+    width: 32px;
+    height: 32px;
+    margin-top: -2px;
+  }
+
+  .editor__crop {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 30px;
+  }
+
+  .editor__fill {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 30px;
+  }
+
+  .editor__list {
+    width: 290px;
+    padding: 20px 6px 0 0;
+    margin-left: -2px;
+  }
+
+  .editor__item {
+    width: 290px;
+  }
+
+  .editor__crop-input {
+    width: 290px;
+    margin-bottom: 72px;
+  }
+
+  .editor__fill-input {
+    width: 290px;
+    margin-bottom: 67px;
+  }
+
+  .editor__contrast-input {
+    width: 280px;
+  }
+
+  .editor__buttons {
+    flex-direction: row;
+    width: 410px;
+    padding: 6px 0  4px;
+    margin: -67px 0 80px 392px;
+  }
+
+  .editor__button-upload {
+    width: 185px;
+    margin: 0 45px 0 0;
+  }
+
+  .editor__button-cancel {
+    width: 185px;
+  }
+}

@@ -1,0 +1,237 @@
+.form-contacts {
+  background-color: @white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 49px 0 10px;
+}
+
+.form-contacts__wrapper {
+  .inner(280px; 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+}
+
+.form-contacts__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .inner(280px; 0);
+}
+
+.form-contacts__item {
+  display: flex;
+}
+
+.form-contacts__label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  .fonts(400; 14px; 30px);
+  text-transform: uppercase;
+  color: @red;
+  margin-top: -25px;
+  padding-bottom: 31px;
+}
+
+.form-contacts__text {
+  padding: 11px 0 7px 24px;
+}
+
+.form-contacts__input {
+  width: 258px;
+  .fonts(400; 18px; 30px);
+  color: @darkgrey;
+  text-align: left;
+  padding: 14px 0 14px 20px;
+  border: 2px solid @lightgrey;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border-color: @black;
+  }
+
+  &:active {
+    border-color: @red;
+  }
+}
+
+.form-contacts__legend {
+  display: none;
+}
+
+@media (min-width: @tablet) {
+  .form-contacts {
+    padding: 16px 0 20px;
+    order: 3;
+  }
+
+  .form-contacts__wrapper {
+    .inner(620px; 20px);
+    border: 2px solid @lightgrey;
+    padding: 0;
+  }
+
+  .form-contacts__list {
+    .inner(620px; 0);
+    margin-top: 25px;
+    padding: 0 0 7px 0;
+  }
+
+  .form-contacts__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -62px;
+  }
+
+  .form-contacts__legend {
+    .fonts(400; 14px; 18px);
+    color: @red;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 255px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .form-contacts__label {
+    padding: 35px 0 14px 0;
+  }
+
+  .form-contacts__text {
+    position: relative;
+    .fonts(400; 14px; 30px);
+    text-transform: uppercase;
+    color: @red;
+    padding-left: 15px;
+    order: 2;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 63px;
+      height: 63px;
+      top: -62px;
+      left: 435px;
+      background-color: @lightgrey;
+    }
+
+    &--phone {
+      position: relative;
+
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        top: -39px;
+        left: 457px;
+        background: url("../img/icon-phone.svg") no-repeat 0 0;
+      }
+    }
+
+    &--email {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        top: -39px;
+        left: 457px;
+        background: url("../img/icon-mail.svg") no-repeat 0 0;
+      }
+    }
+  }
+
+  .form-contacts__input {
+    width: 415px;
+    .fonts(400; 18px; 30px);
+    color: @darkgrey;
+    padding: 14px 0 14px 16px;
+    border: 2px solid @lightgrey;
+    cursor: pointer;
+    outline: none;
+    order: 1;
+  }
+}
+
+@media (min-width: @desktop) {
+  .form-contacts {
+    .inner(940px; 0);
+    padding: 0 0 20px;
+    margin-top: -5px;
+  }
+
+  .form-contacts__wrapper {
+    width: 816px;
+    margin-left: 45px;
+    padding: 10px 60px 0 60px;
+  }
+
+  .form-contacts__list {
+    width: 730px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0 45px;
+  }
+
+  .form-contacts__item {
+    padding: 0 15px 0 10px;
+
+    &:last-child {
+      margin-left: 52px;
+    }
+  }
+
+  .form-contacts__label {
+    width: 370px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .form-contacts__text {
+    margin-left: 8px;
+    padding-bottom: 10px;
+
+    &--phone {
+      &::before {
+        top: -62px;
+        left: 304px;
+      }
+
+      &::after {
+        top: -41px;
+        left: 327px;
+      }
+    }
+
+    &--email {
+      &::before {
+        top: -62px;
+        left: 304px;
+      }
+
+      &::after {
+        top: -39px;
+        left: 327px;
+      }
+    }
+  }
+
+  .form-contacts__input {
+    width: 287px;
+    padding: 14px 0 14px 21px;
+  }
+}
