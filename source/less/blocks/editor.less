@@ -51,6 +51,10 @@
   &:active {
     fill: @red;
   }
+
+  &--mobile {
+    fill: @red;
+  }
 }
 
 .editor__fill {
@@ -166,7 +170,7 @@
   padding: 66px 0  40px;
 }
 
-.photoset__button-upload {
+.editor__button-upload {
   .fonts(700; 18px; 18px);
   color: @red;
   border: 2px solid @red;
@@ -189,7 +193,7 @@
   }
 }
 
-.photoset__button-cancel {
+.editor__button-cancel {
   .fonts(700; 18px; 18px);
   color: #e7e8e8;
   border: 2px solid #dddfe0;
@@ -232,7 +236,7 @@
     height: 400px;
   }
 
-  .editor_fields {
+  .editor__fields {
     width: 40px;
     padding: 9px 0 60px 37px;
     flex-direction: column;
@@ -321,8 +325,8 @@
   }
 
   .editor__fields {
-    width: 55px;
-    padding: 10px 0 60px 51px;
+    padding: 15px 0 60px 0;
+    margin-left: 85px;
   }
 
   .editor__contrast {
@@ -345,8 +349,8 @@
 
   .editor__list {
     width: 290px;
-    padding: 20px 6px 0 0;
-    margin-left: -2px;
+    padding: 20px 0 0 0;
+    margin-left: -100px;
   }
 
   .editor__item {
@@ -364,7 +368,7 @@
   }
 
   .editor__contrast-input {
-    width: 280px;
+    width: 290px;
   }
 
   .editor__buttons {
